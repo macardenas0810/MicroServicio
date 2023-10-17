@@ -1,0 +1,382 @@
+{
+	"info": {
+		"_postman_id": "3b0e17d3-de3e-4533-9ecc-18d3fb2593c9",
+		"name": "Cuentas-Movimientos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9371318",
+		"_collection_link": "https://www.postman.com/interstellar-eclipse-540780/workspace/neoris/collection/9371318-3b0e17d3-de3e-4533-9ecc-18d3fb2593c9?action=share&source=collection_link&creator=9371318"
+	},
+	"item": [
+		{
+			"name": "movimientos",
+			"item": [
+				{
+					"name": "obtener todos los movimientos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/movimientos/todos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"movimientos",
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar movimiento por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/movimientos/porId/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"movimientos",
+								"porId",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar movimiento",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"id\": 1,\n            \"fecha\": \"2023-10-16T17:00:00.000+00:00\",\n            \"tipoMovimiento\": \"Retiro de 575\",\n            \"valor\": -571.0,\n            \"saldo\": 1425.0,\n            \"cuenta\": {\n                \"id\": 1,\n                \"numeroCuenta\": \"478758\",\n                \"tipoCuenta\": \"Ahorro\",\n                \"saldoInicial\": 2000.0,\n                \"estado\": \"True\",\n                \"cliente\": null,\n                \"idCliente\": 1,\n                \"movimientos\": null\n            }\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/movimientos/actualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"movimientos",
+								"actualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar movimiento",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"id\": 1,\n        \"fecha\": \"2023-10-16T17:00:00.000+00:00\",\n        \"tipoMovimiento\": \"Retiro de 571\",\n        \"valor\": -571.0,\n        \"saldo\": 1425.0,\n        \"cuenta\": {\n            \"id\": 1,\n            \"numeroCuenta\": \"478758\",\n            \"tipoCuenta\": \"Ahorro\",\n            \"saldoInicial\": 2000.0,\n            \"estado\": \"True\",\n            \"cliente\": null,\n            \"idCliente\": 1,\n            \"movimientos\": null\n        }\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/movimientos/actualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"movimientos",
+								"actualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar movimiento",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/movimientos/eliminar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"movimientos",
+								"eliminar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cuentas",
+			"item": [
+				{
+					"name": "obtener todas la  cuentas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/cuentas/todos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cuentas",
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar cuenta por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/cuentas/porId/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cuentas",
+								"porId",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear cuenta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\r\n            \"numeroCuenta\": \"47875833\",\r\n            \"tipoCuenta\": \"Ahorros\",\r\n            \"saldoInicial\": 2040000,\r\n            \"estado\": \"True\",\r\n            \"idCliente\": 1\r\n            \r\n            }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/cuentas/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cuentas",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar cuenta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/cuentas/eliminar/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cuentas",
+								"eliminar",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar cuenta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"id\": 4,\r\n            \"numeroCuenta\": \"496825\",\r\n            \"tipoCuenta\": \"Ahorroffffs\",\r\n            \"saldoInicial\": 540.0,\r\n            \"estado\": \"True\",\r\n            \"idCliente\": 2,\r\n            \"movimientos\": null\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/cuentas/actualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cuentas",
+								"actualizar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "casos de usos movimientos",
+			"item": [
+				{
+					"name": "creacion primer movimiento cuenta  478758 Jose Lema",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n        \"fecha\": \"2023-10-16T17:00:00.000+00:00\",\n        \"tipoMovimiento\": \"Retiro de 575\",\n        \"valor\": -575,\n        \"cuenta\": {\n            \"id\": 1,\n            \"numeroCuenta\": \"478758\",\n            \"tipoCuenta\": \"Ahorro\",\n            \"saldoInicial\": 2000.00,\n            \"estado\": \"True\",\n            \"cliente\": null,\n            \"idCliente\": 1,\n            \"movimientos\": null\n        }\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/movimientos/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"movimientos",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "creacion primer movimiento cuenta  225487 Marianela Montalvo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n        \"fecha\": \"2023-10-16T17:00:00.000+00:00\",\n        \"tipoMovimiento\": \"Deposito de 600\",\n        \"valor\": 600,\n        \"cuenta\": {\n            \"id\": 2,\n            \"numeroCuenta\": \"225487\",\n            \"tipoCuenta\": \"Corriente\",\n            \"saldoInicial\": 100.00,\n            \"estado\": \"True\",\n            \"cliente\": null,\n            \"idCliente\": 2\n        }\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/movimientos/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"movimientos",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "creacion primer movimiento cuenta  495878  Juan Osorio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n        \"fecha\": \"2023-10-16T17:00:00.000+00:00\",\n        \"tipoMovimiento\": \"Deposito de 150\",\n        \"valor\": 150,\n        \"cuenta\": {\n            \"id\": 3,\n            \"numeroCuenta\": \"495878\",\n            \"tipoCuenta\": \"Ahorros\",\n            \"saldoInicial\": 0.00,\n            \"estado\": \"True\",\n            \"cliente\": null,\n            \"idCliente\": 3\n        }\n    }\n\n   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/movimientos/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"movimientos",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "creacion primer movimiento cuenta  496825  Marianela Montalvo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n        \"fecha\": \"2023-10-16T17:00:00.000+00:00\",\n        \"tipoMovimiento\": \"Retiro de 540\",\n        \"valor\": -540,\n        \"cuenta\": {\n            \"id\": 4,\n            \"numeroCuenta\": \"496825\",\n            \"tipoCuenta\": \"Ahorros\",\n            \"saldoInicial\": 540.00,\n            \"estado\": \"True\",\n            \"idCliente\": 2\n        }\n    }\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/movimientos/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"movimientos",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
