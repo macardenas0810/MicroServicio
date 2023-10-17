@@ -2,9 +2,7 @@ package com.neoris.cliente.domain.model;
 
 
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.SequenceGenerator;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

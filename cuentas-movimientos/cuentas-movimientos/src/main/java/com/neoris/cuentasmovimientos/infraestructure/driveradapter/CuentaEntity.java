@@ -1,6 +1,6 @@
 package com.neoris.cuentasmovimientos.infraestructure.driveradapter;
 
-import java.math.BigDecimal;
+
 import java.util.List;
 
 import javax.persistence.*;
