@@ -377,6 +377,52 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "informe",
+			"item": [
+				{
+					"name": "http://localhost:8081/movimientos/informe-estado-cuenta?fechaInicio=2023-10-01&fechaFin=2023-10-17",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/movimientos/informe-estado-cuenta?fechaInicio=2023-10-01&fechaFin=2023-10-17",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"movimientos",
+								"informe-estado-cuenta"
+							],
+							"query": [
+								{
+									"key": "fechaInicio",
+									"value": "2023-10-01"
+								},
+								{
+									"key": "fechaFin",
+									"value": "2023-10-17"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
